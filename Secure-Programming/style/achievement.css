@@ -1,0 +1,206 @@
+:root {
+  --primary: #c70101;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: #c70101;
+  border-bottom: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .header-left {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.header .header-right {
+  float: right;
+  margin-right: 0;
+}
+
+.header .header-mid a,
+.header-right a {
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+.header .header-mid a:hover,
+.header-right a:hover {
+  color: black;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+table {
+  width: 50%;
+  transform: translateX(50%);
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th,
+td {
+  border: 2px solid #ddd;
+  color: white;
+  background-color: #231f20;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  text-align: center;
+  background-color: #c70101;
+}
+
+.season {
+  margin-top: 10%;
+  padding-left: 0px;
+}
+
+.season h1 {
+  text-align: center;
+}
+
+.last-table {
+  margin-bottom: 5%;
+}
+
+.center {
+  text-align: center;
+}
+
+.small-image {
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  /* margin-top: 500px; */
+  padding-top: 5px;
+  text-align: center;
+  background-color: #231f20;
+}
+
+footer h2,
+h4 {
+  color: white;
+}
+
+.contact-info p {
+  color: white;
+  font-size: 15px;
+}
+
+/* Media Queries */
+/* Laptop */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .header .header-mid {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--primary);
+    width: 25rem;
+    height: 90vh;
+    transition: 0.5s;
+  }
+
+  .header .header-mid.active {
+    right: 0;
+  }
+
+  .header .header-mid a {
+    color: var(--bg);
+    display: block;
+    margin: 1.75rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .top-wrapper {
+    min-height: 50vh;
+  }
+
+  .top-wrapper .logo {
+    width: 15rem;
+  }
+
+  .stadion .OldTrafford {
+    width: 15rem;
+  }
+  .bottom-wrapper {
+    min-height: 40vh;
+  }
+  .container,
+  .contact-info,
+  .contact-info p {
+    font-size: 60%;
+  }
+
+  footer {
+    bottom: 100%;
+  }
+
+  .success_message {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* background-color: #4CAF50;  */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none; /* Initially hide the success message */
+  }
+}
+/* Mobile */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

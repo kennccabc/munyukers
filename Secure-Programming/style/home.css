@@ -1,0 +1,225 @@
+:root {
+  --primary: #c70101;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: #c70101;
+  border-bottom: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .header-left {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.header .header-right {
+  float: right;
+  margin-right: 0;
+}
+
+.header .header-mid a,
+.header-right a {
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+.header .header-mid a:hover,
+.header-right a:hover {
+  color: black;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.top-wrapper {
+  /* margin-top: 10rem; */
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  /* padding: 1rem 5%;
+  max-width: 60rem; */
+}
+
+.top-wrapper h1 {
+  font-size: 3rem;
+  color: #000000;
+  text-shadow: 1px 1px 1px;
+  line-height: 1;
+}
+
+.top-wrapper p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.top-wrapper .logo {
+  width: 30rem;
+  margin-left: 5rem;
+  float: right;
+  /* align-items: center; */
+  text-align: center;
+}
+
+.bottom-wrapper {
+  min-height: 60vh;
+}
+
+.content {
+  float: left;
+  margin-left: 5%;
+  margin-right: 10%;
+  width: 50%;
+}
+
+.history,
+.stadion {
+  margin: 0, 10%, 10%, 0;
+  text-align: justify;
+}
+
+.history h2 {
+  font-size: 150%;
+}
+
+.stadion .OldTrafford {
+  margin-right: 0;
+  /* width: 10rem; */
+}
+
+footer {
+  /* margin-top: 500px; */
+  padding-top: 5px;
+  text-align: center;
+  background-color: #231f20;
+}
+
+footer h2,
+h4 {
+  color: white;
+}
+
+.contact-info p {
+  color: white;
+  font-size: 15px;
+}
+
+/* Media Queries */
+/* Laptop */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .header .header-mid {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--primary);
+    width: 25rem;
+    height: 90vh;
+    transition: 0.5s;
+  }
+
+  .header .header-mid.active {
+    right: 0;
+  }
+
+  .header .header-mid a {
+    color: var(--bg);
+    display: block;
+    margin: 1.75rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .top-wrapper {
+    min-height: 50vh;
+  }
+
+  .top-wrapper .logo {
+    width: 15rem;
+  }
+
+  .stadion .OldTrafford {
+    width: 15rem;
+  }
+  .bottom-wrapper {
+    min-height: 40vh;
+  }
+  .container,
+  .contact-info,
+  .contact-info p {
+    font-size: 60%;
+  }
+  
+  footer {
+    bottom: 100%;
+  }
+
+  .success_message {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    /* background-color: #4CAF50;  */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+     /* display: none; Initially hide the success message */
+    
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
